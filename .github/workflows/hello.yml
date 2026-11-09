@@ -22,5 +22,5 @@ jobs:
           echo "Événement : $GITHUB_EVENT_NAME"
 
       # Pour tester l'étape 7 (échec volontaire), décommentez la ligne ci-dessous :
-      # - name: Test d'échec volontaire
-      #   run: exit 1
+      - name: Test d'échec volontaire
+        run: exit 1
