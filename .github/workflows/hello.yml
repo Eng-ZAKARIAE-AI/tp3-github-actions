@@ -14,3 +14,13 @@ jobs:
 
       - name: Execution du script
         run: ./script.sh
+
+      - name: Informations Git
+        run: |
+          echo "Branche : $GITHUB_REF_NAME"
+          echo "Commit : $GITHUB_SHA"
+          echo "Événement : $GITHUB_EVENT_NAME"
+
+      # Pour tester l'étape 7 (échec volontaire), décommentez la ligne ci-dessous :
+      # - name: Test d'échec volontaire
+      #   run: exit 1
