@@ -4,12 +4,13 @@ on:
   push:
   workflow_dispatch:
 
-
 jobs:
   hello:
     runs-on: ubuntu-latest
 
-
     steps:
-      - name: Afficher un message
-        run: echo "Hello from GitHub Actions"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Execution du script
+        run: ./script.sh
